@@ -13,6 +13,8 @@ public class Task3 {
             } else if (number % 3 == 0) {
                 System.out.println("Fizz");
             } else {
+                // при вводе любого числа, не кратного 3 и 5 показывает Buzz.
+                //Buzz должно выводиться тогда и только тогда когда число кратно 5
                 System.out.println("Buzz");
             }
         } else {

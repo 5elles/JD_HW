@@ -16,11 +16,11 @@ public class Task6 {
         if (discriminant < 0) {
             System.out.println("Корней нет!");
         } else if (discriminant == 0.0) {
-            double x = -(b / (2 * a));
+            double x = -(b / (2 * a)); //деление на 0, если а = 0!
             System.out.println("Корень квадратного уровнения: " + x);
         } else {
-            double x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
-            double x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+            double x1 = (-b + Math.sqrt(discriminant)) / (2 * a); //деление на 0, если а = 0!
+            double x2 = (-b - Math.sqrt(discriminant)) / (2 * a); //деление на 0, если а = 0!
             System.out.println("Первый корень квадратного уравнения: " + x1);
             System.out.println("Второй корень квадратного уравнения: " + x2);
         }
