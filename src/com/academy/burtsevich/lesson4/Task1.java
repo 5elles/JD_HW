@@ -33,7 +33,7 @@ public class Task1 {
         System.out.printf("%-10s%-10s%n", "Параметр", "Результат");
         System.out.println("---------------------------------");
         for (double i = aMin; i < aMax; i += aDelta) {
-            System.out.printf("%-10.2f%-30f%n", i, (Math.pow(Math.E, i * x) - 3.45 * i));
+            System.out.printf("%-10.2f%-30s%n", i, (Math.pow(Math.E, i * x) - 3.45 * i));
 //            System.out.println(Math.pow(Math.E, i * x) - 3.45 * i);
         }
     }
