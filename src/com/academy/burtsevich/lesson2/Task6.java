@@ -13,7 +13,7 @@ public class Task6 {
         System.out.println("Введите число 'c': ");
         c = scanner.nextDouble();
         discriminant = b * b - 4 * a * c;
-        if (discriminant < 0) {
+        if (discriminant < 0 | a == 0) {
             System.out.println("Корней нет!");
         } else if (discriminant == 0.0) {
             double x = -(b / (2 * a));
