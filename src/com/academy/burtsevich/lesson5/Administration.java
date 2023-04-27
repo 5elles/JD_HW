@@ -2,7 +2,7 @@ package com.academy.burtsevich.lesson5;
 
 public class Administration {
 
-    public void sayHello(Student student) {
+    public void sayHello(Student student) { // этим методом должен обладать класс студента!!!
         System.out.println("Меня зовут " + student.getFullName());
     }
 

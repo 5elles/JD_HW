@@ -17,9 +17,9 @@ public class Task3 {
 
         Student[] students = {st1, st2, st3, st4, st5, st6, st7, st8, st9, st10};
 
-        Administration.getStudentsOnCourse(students, 2);
+        Administration.getStudentsOnCourse(students, 2); // подход рабочий, но в рамках ООП лучше создать объект класса администрации
         System.out.println("_____________________________________");
-        Administration.getStudentsOlderThan(students, 1940);
+        Administration.getStudentsOlderThan(students, 1990);
 
     }
 }
