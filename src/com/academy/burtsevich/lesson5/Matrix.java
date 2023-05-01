@@ -23,9 +23,9 @@ public class Matrix {
         this.matrix = new int[rows][columns];
     }
 
-    public static void printMatrix(Matrix matrix) {
-        for (int i = 0; i < matrix.getMatrix().length; i++) {
-            System.out.println(Arrays.toString(matrix.getMatrix()[i]));
+    public void printMatrix() {
+        for (int i = 0; i < this.getMatrix().length; i++) {
+            System.out.println(Arrays.toString(this.getMatrix()[i]));
         }
     }
 

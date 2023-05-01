@@ -11,25 +11,26 @@ public class Task4 {
 
         System.out.println();
         System.out.println("Матрица №1");
-        Matrix.printMatrix(matrix1);
+        matrix1.printMatrix();
+
         System.out.println();
         System.out.println("Матрица №2");
-        Matrix.printMatrix(matrix2);
+        matrix2.printMatrix();
 
         Matrix matrix4 = matrix1.add(matrix2);
         System.out.println();
         System.out.println("Результат сложения матриц №1 и №2");
-        Matrix.printMatrix(matrix4);
+        matrix4.printMatrix();
 
         Matrix matrix5 = matrix1.multiply(matrix2);
         System.out.println();
         System.out.println("Результат умножения матриц №1 и №2");
-        Matrix.printMatrix(matrix5);
+        matrix5.printMatrix();
 
         Matrix matrix6 = matrix1.subtract(matrix2);
         System.out.println();
         System.out.println("Результат вычитания матриц №1 и №2");
-        Matrix.printMatrix(matrix6);
+        matrix6.printMatrix();
 
         System.out.println();
         System.out.println("Попытка сложить разные по размеру матрицы:");

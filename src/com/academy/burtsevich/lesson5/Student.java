@@ -71,4 +71,8 @@ public class Student {
     public void setYearOfBirth(int yearOfBirth) {
         this.yearOfBirth = yearOfBirth;
     }
+
+    public void sayHello() {
+        System.out.println("Меня зовут " + this.getFullName());
+    }
 }

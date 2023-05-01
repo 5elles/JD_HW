@@ -14,10 +14,11 @@ public class Task3 {
         Student st8 = new Student(1019, "Жук Светлана Петровна", "Психологии", 1, 405, 1917);
         Student st9 = new Student(1020, "Кот Владимир Владимирович", "Журналистики", 1, 405, 1985);
         Student st10 = new Student(1021, "Сырсксая Софья Олеговна", "Журналистики", 5, 405, 1987);
+        Administration dean = new Administration(2001, "Иванов Иван Иванович");
 
         Student[] students = {st1, st2, st3, st4, st5, st6, st7, st8, st9, st10};
 
-        Administration.getStudentsOnCourse(students, 2);
+        dean.getStudentsOnCourse(students, 2);
         System.out.println("_____________________________________");
         Administration.getStudentsOlderThan(students, 1940);
 
