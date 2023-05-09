@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class Task6 {
     public static void main(String[] args) {
-        String str = "Listen k1_%!+to@mail.su the 'k;kj;nn_ljl.p^^erson@gmail.cOm.ru-.  jl;aj[;kl/neUl-c_a!t@mail.ruws from to@day.com and -+375298904356read the text at the ti+9187390762me. jljslfjlsjfakjlkljljkjkjkjkjkjkjkjkjkasdfsfadfasdfaasdfasdfafasdfaffadf@ljljl.jljljkljljljlkjljkkjiafncmnkjhjkhuhhjhuunuhuugkbcadf.com";
+        String str = "Listen k1_%!+to@ma@il.su the 'k;kj;nn_ljl.p^^erson@gma[il.cOm.ru-.  jl;aj[;kl/neUl-c_a!t@mail.ruws from to@day.com and -+375298904356read the text at the ti+9187390762me. jljslfjlsjfakjlkljljkjkjkjkjkjkjkjkjkasdfsfadfasdfaasdfasdfafasdfaffadf@ljljl.jljljkljljljlkjljkkjiafncmnkjhjkhuhhjhuunuhuugkbcadf.com";
         System.out.println();
         System.out.println("Emails: ");
         System.out.println();
@@ -21,4 +21,10 @@ public class Task6 {
             }
         }
     }
+
+    /*
+    Имя домена может состоять из букв от A до Z (верхний или нижний регистры), цифры от 0 до 9 и знак минус (-);
+
+    Я добавил "[" в один из твоих емейлов и все равно получил его вывод
+     */
 }

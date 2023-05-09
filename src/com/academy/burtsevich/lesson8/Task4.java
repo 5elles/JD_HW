@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 
 public class Task4 {
     public static void main(String[] args) {
-        String str = "Listen to the news from today and read the text at the same time. Listen to the news from today without reading the text.";
+        String str = "Listen to the news from today and read the a text at the same time. Listen to the news from today without reading the text."; //я изменил строку(добавил "а"), но количество уникальных слов не изменилось
 
         System.out.println();
         System.out.print("Количество уникальных слов в строке: ");

@@ -38,7 +38,7 @@ public final class Task3 {
     }
 
     public static void printWords(String str) {
-        Pattern pattern = Pattern.compile("\\b[BCDFGHJKLMNPQRSTVWXZbcdfghjklmnpqrstvwxz][a-z]+[AEIOUYaeiouy]\\b");
+        Pattern pattern = Pattern.compile("\\b[BCDFGHJKLMNPQRSTVWXZbcdfghjklmnpqrstvwxz][a-z]+[AEIOUYaeiouy]\\b"); // слово "to" удовлетворяет условию, но не выводится
         Matcher matcher = pattern.matcher(str);
         while (matcher.find()){
             System.out.println(str.substring(matcher.start(), matcher.end()));
