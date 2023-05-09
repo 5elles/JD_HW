@@ -24,8 +24,4 @@ public class Task2 {
         return string;
     }
 
-    // не работает
-    // при вводе "	jhb	 kjb	k	jbkj	bk 	kjbk	j 	f sdkjf sdnkjfn skaj     skjdnfksj d          "
-    // получил ответ "jhb	 kjb	k	jbkj	bk 	kjbk	j 	f sdkjf sdnkjfn skaj skjdnfksj d"
-
 }
