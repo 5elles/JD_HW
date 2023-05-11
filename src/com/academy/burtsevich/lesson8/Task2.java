@@ -18,6 +18,10 @@ public class Task2 {
 
     public static String normalizeString(String str) {
         String string = str.trim();
+        while (string.contains("\t")){
+            string = string.replace("\t", " ");
+        }
+
         while (string.contains("  ")) {
             string = string.replace("  ", " ");
         }

@@ -13,7 +13,7 @@ public class Task6 {
     }
 
     public static void getEmails(String s){
-        Pattern pattern = Pattern.compile("[\\w^!$%+-\\.=?{}&]+@[A-z0-9\\-\\.]+\\.[A-z0-9-]+[A-z0-9]");
+        Pattern pattern = Pattern.compile("([\\w^!$%+-\\.=?{}&]+)@([\\w\\-\\.]+)\\.([\\w-]*\\w)");
         Matcher matcher = pattern.matcher(s);
         while (matcher.find()){
             if (matcher.group().length() < 50){  // :) так и не понял, как ограничить сложносоставную строку в полном объеме, а не по отдельным элементам
