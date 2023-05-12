@@ -13,13 +13,8 @@ public class GeometricFigures {
         }
     }
 
-    public void getArea(Parallelepiped parallelepiped) {
-        // Площадь основания параллелепипеда для основания в виде прямоуголника
-        System.out.println(parallelepiped.getSideA().doubleValue() * parallelepiped.getSideB().doubleValue());
-    }
-
-    public void getArea(Rectangle rectangle) {
-        System.out.println(rectangle.getSideA().doubleValue() * rectangle.getSideB().doubleValue());
+    public void getArea(Rectangle<?> figure) {
+        System.out.println(figure.getSideA().doubleValue() * figure.getSideB().doubleValue());
     }
 
     public void getVolume(Parallelepiped<?> parallelepiped) {
