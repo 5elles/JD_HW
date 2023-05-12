@@ -13,30 +13,17 @@ public class GeometricFigures {
         }
     }
 
-    public void getArea() {
-
+    public void getArea(Parallelepiped parallelepiped) {
         // Площадь основания параллелепипеда для основания в виде прямоуголника
-        if (this instanceof Parallelepiped<?>) {
-            System.out.println(((Parallelepiped<?>) this).getSideA().doubleValue() * ((Parallelepiped<?>) this).getSideB().doubleValue());
-            return;
-        }
-        if (this instanceof Rectangle<?>) {
-            System.out.println(((Rectangle<?>) this).getSideA().doubleValue() * ((Rectangle<?>) this).getSideB().doubleValue());
-            return;
-        }
-        // Не смог придумать как реализовать запрет на вызов метода объектом класса Line,
-        // не меняя при этом структуру наследования Линия - Прямоугольник - Параллелепипед и не вводя
-        // новый класс как дополнительный маркер... Оставил в таком виде, т.к вызов для Линии просто не принесет результата - костыль.
-        // Нужна подсказка!
+        System.out.println(parallelepiped.getSideA().doubleValue() * parallelepiped.getSideB().doubleValue());
     }
 
-    public void getVolume() {
-        if (this instanceof Parallelepiped<?>){
-            System.out.println(
-                    ((Parallelepiped<?>) this).getSideA().doubleValue() * ((Parallelepiped<?>) this).getSideB().doubleValue() * ((Parallelepiped<?>) this).getSideC().doubleValue()
-            );
-        }
+    public void getArea(Rectangle rectangle) {
+        System.out.println(rectangle.getSideA().doubleValue() * rectangle.getSideB().doubleValue());
     }
 
-
+    public void getVolume(Parallelepiped<?> parallelepiped) {
+        System.out.println(
+                parallelepiped.getSideA().doubleValue() * parallelepiped.getSideB().doubleValue() * parallelepiped.getSideC().doubleValue());
+    }
 }

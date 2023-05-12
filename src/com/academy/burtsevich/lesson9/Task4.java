@@ -7,6 +7,7 @@ public class Task4 {
         Parallelepiped<?> parallelepiped1 = new Parallelepiped<>(5, 6, 3);
         Cube cube = new Cube(1, 2, 3); // выводится предупреждение
         Cube cube1 = new Cube(3, 3, 3);
+        GeometricFigures geometricFigures = new GeometricFigures();
 
         line1.getSideLength();
         System.out.println("#####");
@@ -14,18 +15,17 @@ public class Task4 {
         System.out.println("#####");
         parallelepiped1.getSideLength();
         System.out.println("#####");
-        line1.getArea();
         System.out.print("Площадь прямоугольника: ");
-        rectangle1.getArea();
-        System.out.print("Площадь основания прямоугольного паралеллепипеда: ");
-        parallelepiped1.getArea();
-        System.out.print("Объем паралеллепипеда: ");
-        parallelepiped1.getVolume();
+        geometricFigures.getArea(rectangle1);
+        System.out.print("Площадь основания прямоугольного параллелепипеда: ");
+        geometricFigures.getArea(parallelepiped1);
+        System.out.print("Объем параллелепипеда: ");
+        geometricFigures.getVolume(parallelepiped1);
         System.out.println("#####");
         System.out.print("V куба: ");
-        cube1.getVolume();
+        geometricFigures.getVolume(cube1);
         System.out.print("S основания куба: ");
-        cube1.getArea();
+        geometricFigures.getArea(cube1);
         System.out.println("#####");
         System.out.println("Куб до изменения одной из сторон");
         System.out.println(cube1);
