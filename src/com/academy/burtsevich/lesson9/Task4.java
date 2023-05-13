@@ -2,11 +2,12 @@ package com.academy.burtsevich.lesson9;
 
 public class Task4 {
     public static void main(String[] args) {
+        //Параметризовать все переменные ниже
         Line<?> line1 = new Line<>(10);
         Rectangle<?> rectangle1 = new Rectangle<>(4, 2);
         Parallelepiped<?> parallelepiped1 = new Parallelepiped<>(5, 6, 3);
         Cube cube = new Cube(1, 2, 3); // выводится предупреждение
-        Cube cube1 = new Cube(3, 3, 3);
+        Cube cube1 = new Cube(3, 3, 3); //Куб тоже должен быть параметризован
         GeometricFigures geometricFigures = new GeometricFigures();
 
         line1.getSideLength();

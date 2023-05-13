@@ -1,6 +1,6 @@
 package com.academy.burtsevich.lesson9;
 
-public class Rectangle<T extends Number> extends Line{
+public class Rectangle<T extends Number> extends Line{ //потерял параметризацию у Line
     private  T sideB;
     public Rectangle(){}
 

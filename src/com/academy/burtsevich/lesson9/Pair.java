@@ -35,11 +35,11 @@ public class Pair<T, U> {
 
 
 
-    public void first() {
+    public void first() { // метод должен возвращать, а не выводить на экран
         System.out.println("1-й элемент: " + this.value1);
     }
 
-    public void last() {
+    public void last() { // метод должен возвращать, а не выводить на экран
         System.out.println("2-й элемент: " + this.value2);
     }
 
@@ -49,11 +49,11 @@ public class Pair<T, U> {
         value2 = (U) temp;
     }
 
-    public void replaceFirst(Object newVal){
+    public void replaceFirst(Object newVal){ //должен принимать только тот тип, которым обобщен
         this.value1 = (T) newVal;
     }
 
-    public void replaceLast(Object newVal){
+    public void replaceLast(Object newVal){ //должен принимать только тот тип, которым обобщен
         this.value2 = (U) newVal;
     }
 }

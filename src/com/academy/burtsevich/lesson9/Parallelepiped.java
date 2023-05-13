@@ -1,6 +1,6 @@
 package com.academy.burtsevich.lesson9;
 
-public class Parallelepiped<T extends Number> extends Rectangle {
+public class Parallelepiped<T extends Number> extends Rectangle { //потерял параметризацию у Rectangle
     private T sideC;
 
     public Parallelepiped() {

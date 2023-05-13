@@ -6,6 +6,8 @@ public class GeometricFigures {
         System.out.println("Side a = " + ((Line<?>) this).getSideA().doubleValue());
         if (this instanceof Rectangle<?>) { // "выводит...длину ребра (прямоугольника или параллелепипеда)" -
             // у параллелепипеда несколько ребер, т.к. нет ясности в задании - вывожу все. У прямоугольника две стороны - тоже вывожу обе.
+            //смысл в том. что sideA есть и у линии и у прямоугольника и у параллелепипеда. вот ее и нужно вывести.
+            //тогда и instaceof не нужны.
             System.out.println("Side b = " + ((Rectangle<?>) this).getSideB().doubleValue());
         }
         if (this instanceof Parallelepiped<?>) {
