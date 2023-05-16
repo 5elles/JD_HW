@@ -1,6 +1,6 @@
 package com.academy.burtsevich.lesson9;
 
-public class Line<T extends Number> extends GeometricFigures{
+public class Line<T extends Number> {
 
     private T sideA;
 

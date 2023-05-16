@@ -2,24 +2,25 @@ package com.academy.burtsevich.lesson9;
 
 public class Task4 {
     public static void main(String[] args) {
-        Line<?> line1 = new Line<>(10);
-        Rectangle<?> rectangle1 = new Rectangle<>(4, 2);
+        Line<Number> line1 = new Line<>(10);
+        Rectangle<Number> rectangle1 = new Rectangle<>(4, 2);
         Parallelepiped<?> parallelepiped1 = new Parallelepiped<>(5, 6, 3);
-        Cube cube = new Cube(1, 2, 3); // выводится предупреждение
-        Cube cube1 = new Cube(3, 3, 3);
+        Cube<Number> cube = new Cube<>(1, 2, 3); // выводится предупреждение
+        Cube<Number> cube1 = new Cube<>(3, 3, 3);
         GeometricFigures geometricFigures = new GeometricFigures();
 
-        line1.getSideLength();
         System.out.println("#####");
-        rectangle1.getSideLength();
+        System.out.println("Длины сторон разных фигур:");
+        geometricFigures.getSideLength(line1);
+        geometricFigures.getSideLength(rectangle1);
+        geometricFigures.getSideLength(parallelepiped1);
         System.out.println("#####");
-        parallelepiped1.getSideLength();
-        System.out.println("#####");
-        System.out.print("Площадь прямоугольника: ");
+        System.out.print("S прямоугольника: ");
         geometricFigures.getArea(rectangle1);
-        System.out.print("Площадь основания прямоугольного параллелепипеда: ");
+        System.out.print("S основания прямоугольного параллелепипеда: ");
         geometricFigures.getArea(parallelepiped1);
-        System.out.print("Объем параллелепипеда: ");
+        System.out.println("#####");
+        System.out.print("V параллелепипеда: ");
         geometricFigures.getVolume(parallelepiped1);
         System.out.println("#####");
         System.out.print("V куба: ");

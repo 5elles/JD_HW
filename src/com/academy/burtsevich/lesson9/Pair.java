@@ -33,14 +33,12 @@ public class Pair<T, U> {
                 "\n}";
     }
 
-
-
-    public void first() {
-        System.out.println("1-й элемент: " + this.value1);
+    public T first() {
+        return this.value1;
     }
 
-    public void last() {
-        System.out.println("2-й элемент: " + this.value2);
+    public U last() {
+        return this.value2;
     }
 
     public void swap() {
@@ -49,11 +47,11 @@ public class Pair<T, U> {
         value2 = (U) temp;
     }
 
-    public void replaceFirst(Object newVal){
-        this.value1 = (T) newVal;
+    public void replaceFirst(T newVal) {
+        this.value1 = newVal;
     }
 
-    public void replaceLast(Object newVal){
-        this.value2 = (U) newVal;
+    public void replaceLast(U newVal) {
+        this.value2 = newVal;
     }
 }
