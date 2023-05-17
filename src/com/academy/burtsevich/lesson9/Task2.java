@@ -5,7 +5,7 @@ public class Task2 {
         Pair<Integer, Integer> pair1 = new Pair<>(1, 2);
         Pair<String, String> pair2 = new Pair<>("first", "second");
         Pair<String, Integer> pair3 = new Pair<>("first", 2);
-        Pair<Line<Number>, Integer> pair4 = new Pair<>(new Line<>(3), 2);
+        Pair<Integer, String> pair4 = pair3.swap();
 
         System.out.println("************");
         System.out.println("1-й элемент: " + pair1.first());
@@ -14,7 +14,8 @@ public class Task2 {
         System.out.println("************");
         System.out.println("Pair3 до применения swap:\n" + pair3);
         pair3.swap();
-        System.out.println("Pair3 после swap:\n" + pair3);
+        System.out.println("Присваиваем новой переменной swap от Pair3...");
+        System.out.println("Pair4 после swap:\n" + pair4);
         System.out.println("************");
         System.out.println("До применения метода \"replaceFirst\":\n" + pair1);
         pair1.replaceFirst(1234);
@@ -24,8 +25,5 @@ public class Task2 {
         pair2.replaceLast("newValue");
         System.out.println("После \"replaceLast\":\n" + pair2);
 
-        System.out.println(pair4);
-        pair4.swap();
-        System.out.println(pair4);
     }
 }

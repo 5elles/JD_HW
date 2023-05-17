@@ -41,10 +41,11 @@ public class Pair<T, U> {
         return this.value2;
     }
 
-    public void swap() {
-        T temp = this.value1;
-        value1 = (T) value2;
-        value2 = (U) temp;
+    public Pair<U, T> swap() {
+//        T temp = this.value1;
+//        value1 = (T) value2;
+//        value2 = (U) temp;
+        return new Pair<>(value2, value1);
     }
 
     public void replaceFirst(T newVal) {
