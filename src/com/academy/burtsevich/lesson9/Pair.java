@@ -42,9 +42,6 @@ public class Pair<T, U> {
     }
 
     public Pair<U, T> swap() {
-//        T temp = this.value1;
-//        value1 = (T) value2;
-//        value2 = (U) temp;
         return new Pair<>(value2, value1);
     }
 
