@@ -13,7 +13,6 @@ public class Task2 {
         System.out.println("2-й элемент: " + pair2.last());
         System.out.println("************");
         System.out.println("Pair3 до применения swap:\n" + pair3);
-        pair3.swap();
         System.out.println("Присваиваем новой переменной swap от Pair3...");
         System.out.println("Pair4 после swap:\n" + pair4);
         System.out.println("************");
