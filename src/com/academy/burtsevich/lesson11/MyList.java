@@ -94,7 +94,7 @@ public class MyList<T> implements List<T> {
 
 
     @Override
-    public boolean addAll(Collection<? extends T> c) {
+    public boolean addAll(Collection<? extends T> c) { //метод не работает. всегда исключение java.lang.ArrayIndexOutOfBoundsException
         T[] array = (T[]) c.toArray();
         int positionIndex = elements.length;
         if (size == elements.length) {
