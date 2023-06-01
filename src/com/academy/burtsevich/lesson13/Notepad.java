@@ -7,7 +7,7 @@ public class Notepad {
     Map<String, Note> noteMap = new TreeMap<>(keyComparator.reversed());
 
     public static class Note {
-        private final String LASTNAME; //конвеншн именований. это не константа. да, поле final, но тем не менее это не какой-то фиксированый общий параметр. для каждого объекта он свой - это переменная
+        private final String LASTNAME;
 
         Note(String LASTNAME) {
             this.LASTNAME = LASTNAME;
