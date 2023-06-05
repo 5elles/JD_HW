@@ -34,8 +34,14 @@ public class Task4 {
                         } else {
                             filesNumber++;
                             filesSize += file1.length();
+                            filesType = "";
                         }
-                        System.out.printf("%10tD%8s%8s%25s\n", file1.lastModified(), filesType, file1.length(), file1.getName());
+                        if (file1.isDirectory()){
+                            System.out.printf("%-2td.%-2tm.%-4tY%10tT  %7s  %-18s  %-50s\n", file1.lastModified(),file1.lastModified(),file1.lastModified(), file1.lastModified(), filesType, "", file1.getName());
+                        } else {
+                            System.out.printf("%-2td.%-2tm.%-4tY%10tT  %7s  %-18s  %-50s\n", file1.lastModified(),file1.lastModified(), file1.lastModified(), file1.lastModified(), filesType, file1.length(), file1.getName());
+                        }
+
                     }
                 }
                 System.out.printf("файлов: %s%s -> %s байт\nпапок: %s%s -> %s байт свободно\n", "", filesNumber, filesSize, "", dirsNumber, file.getFreeSpace());

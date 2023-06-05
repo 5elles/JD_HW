@@ -7,20 +7,20 @@ public class Notepad {
     Map<String, Note> noteMap = new TreeMap<>(keyComparator.reversed());
 
     public static class Note {
-        private final String LASTNAME;
+        private final String lastname;
 
-        Note(String LASTNAME) {
-            this.LASTNAME = LASTNAME;
+        Note(String lastname) {
+            this.lastname = lastname;
         }
 
         public String getLASTNAME() {
-            return LASTNAME;
+            return lastname;
         }
 
         @Override
         public String toString() {
             return "Note {" +
-                    "LASTNAME = '" + LASTNAME + '\'' +
+                    "LASTNAME = '" + lastname + '\'' +
                     '}';
         }
     }
