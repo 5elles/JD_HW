@@ -9,7 +9,7 @@ public class QueueContainer {
     private static final AtomicInteger counter = new AtomicInteger(0);
 
     public static void addBuyer(Buyer buyer) {
-        synchronized (queue) {
+        synchronized (queue) {//синхронизации больше не нужны. используемые в полях классы сами по себе обеспечат потокобезопасность
             queue.add(buyer);
         }
     }
