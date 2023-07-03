@@ -18,9 +18,14 @@ public class Task3 {
 
         Student[] students = {st1, st2, st3, st4, st5, st6, st7, st8, st9, st10};
 
-        dean.getStudentsOnCourse(students, 2);
+        System.out.println("Студенты, обучающиеся на 2 курсе:");
+        dean.getStudentsOnCourse(students, 2)
+                .forEach((key, value) -> System.out.printf("%s. %s\n", key, value));
         System.out.println("_____________________________________");
-        Administration.getStudentsOlderThan(students, 1940);
+        int birthYear = 1970;
+        System.out.println("После " + birthYear + " года родились: ");
+        dean.getStudentsOlderThan(students, birthYear)
+                .forEach((integer, s) -> System.out.printf("%s. %s\n", integer, s));
 
     }
 }

@@ -5,7 +5,7 @@ import com.academy.burtsevich.lesson4.Task2;
 public class Fraction {
     private int numerator, denominator;
 
-    public Fraction(int numerator, int denominator){
+    public Fraction(int numerator, int denominator) {
         this.numerator = numerator;
         this.denominator = denominator;
     }
@@ -26,13 +26,13 @@ public class Fraction {
         return denominator;
     }
 
-    public String getFractionInStr(){
+    public String getFractionInStr() {
         String numeratorString = Integer.toString(this.numerator);
         String denominatorString = Integer.toString(this.denominator);
-        return numeratorString + " / " + denominatorString;
+        return numeratorString + "/" + denominatorString;
     }
 
-    public Fraction getSum(Fraction secondFrac){
+    public Fraction getSum(Fraction secondFrac) {
         int nod = Math.lcm(this.denominator, secondFrac.denominator);
         int newThisNumerator = this.numerator * (nod / this.denominator);
         int newSecondNumerator = secondFrac.numerator * (nod / secondFrac.denominator);
@@ -40,12 +40,27 @@ public class Fraction {
 
     }
 
-    public Fraction multiplication (int number){
+    public Fraction multiplication(int number) {
         return new Fraction(this.numerator * number, this.denominator);
     }
 
-    public Fraction division (int number){
+
+    public Fraction division(int number) {
+        if (number == 0) {
+            throw new ArithmeticException("Division by zero");
+        }
         return new Fraction(this.numerator, this.denominator * number);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+        if (obj == this) {
+            return true;
+        }
+        Fraction fraction = (Fraction) obj;
+        return this.numerator == fraction.numerator || this.denominator == fraction.denominator;
+    }
 }

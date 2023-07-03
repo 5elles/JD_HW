@@ -12,7 +12,7 @@ public class Student {
         this.fullName = fullName;
         this.faculty = faculty;
         if (course > 5 | course < 1) {
-            System.out.println("Курс может быть от 1 до 5");
+            throw new RuntimeException("Ошибка в выборе курса!");
         } else {
             this.course = course;
         }
@@ -58,7 +58,7 @@ public class Student {
 
     public void setCourse(int course) {
         if (course > 5 | course < 1) {
-            System.out.println("Курс может быть от 1 до 5");
+            throw new RuntimeException("Ошибка в выборе курса!");
         } else {
             this.course = course;
         }

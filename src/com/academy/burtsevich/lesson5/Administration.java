@@ -1,5 +1,8 @@
 package com.academy.burtsevich.lesson5;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class Administration {
 
     private int id;
@@ -8,7 +11,6 @@ public class Administration {
     public Administration() {
     }
 
-    ;
 
     Administration(int id, String fullName) {
         this.id = id;
@@ -23,7 +25,11 @@ public class Administration {
         return this.fullName;
     }
 
-    public void setId(int id) {
+    public void setId(int id)
+    {
+        if (id < 1){
+            throw new RuntimeException("ID не может быть меньше 1");
+        }
         this.id = id;
     }
 
@@ -32,31 +38,31 @@ public class Administration {
     }
 
 
-    public void getStudentsOnCourse(Student[] students, int course) {
-        System.out.println("Студенты, обучающиеся на " + course + " курсе:");
+    public Map<Integer, String> getStudentsOnCourse(Student[] students, int course) {
         int count = 0;
 
+        Map<Integer, String> map = new LinkedHashMap<>();
         for (Student student : students) {
             if (student.getCourse() == course) {
                 ++count;
-                System.out.println(count + ". " + student.getFullName());
+                map.put(count, student.getFullName());
             }
         }
+        return map;
     }
 
-    public static void getStudentsOlderThan(Student[] students, int year) {
+    public Map<Integer, String> getStudentsOlderThan(Student[] students, int year) {
+        Map<Integer, String> map = new LinkedHashMap<>();
         if (year < 1900 | year > 2020) {
-            System.out.println("Проверьте год");
+            throw new RuntimeException("Ошибка в дате рождения");
         } else {
             int count = 0;
-            System.out.println("После " + year + " года родились: ");
-            for (int i = 0; i < students.length; i++) {
-                if (students[i].getYearOfBirth() > year) {
-                    ++count;
-                    System.out.println(count + ". " + students[i].getFullName() + ", " + students[i].getYearOfBirth() + " г.р.");
+            for (Student student : students) {
+                if (student.getYearOfBirth() > year) {
+                    map.put(++count, student.getFullName());
                 }
-
             }
         }
+        return map;
     }
 }
