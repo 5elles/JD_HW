@@ -28,7 +28,7 @@ public class Task3 {
                 3 - сироп.""");
         int selectedAdditive = scanner.nextInt();
 
-        switch (selectedAdditive) {
+        switch (selectedAdditive) { //нужно сделать так, что бы я мог добавить не только что-то одно, а любые добавки в любых комбинациях
             case 1 -> drink = new SugarAdder(drink);
             case 2 -> drink = new MilkAdder(drink);
             case 3 -> drink = new SyrupAdder(drink);
