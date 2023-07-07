@@ -1,14 +1,25 @@
 package com.academy.burtsevich.lesson21.area;
 
-public class Circle implements Shape {
-    double r;
+import java.util.Scanner;
 
-    Circle(double[] params) {
-        this.r = params[0];
+public class Circle implements Shape {
+    private double radius;
+    Scanner scanner = new Scanner(System.in);
+
+    public void setRadius(double radius) {
+        if (radius <= 0) {
+            throw new ArithmeticException("Ошибка в размерах фигуры!!!");
+        }
+        this.radius = radius;
+    }
+
+    Circle() {
+        System.out.print("Радиус круга = ");
+        setRadius(scanner.nextDouble());
     }
 
     @Override
     public double getArea() {
-        return Math.PI * Math.pow(r, 2);
+        return Math.PI * Math.pow(radius, 2);
     }
 }

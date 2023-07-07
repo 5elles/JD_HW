@@ -1,5 +1,7 @@
 package com.academy.burtsevich.lesson21.decorator;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Task3 {
@@ -12,7 +14,7 @@ public class Task3 {
 
         int customersChoice = scanner.nextInt();
         if (customersChoice < 1 || customersChoice > 2) {
-            throw new RuntimeException("Ошбибка в выборе напитка!!!");
+            throw new RuntimeException("Ошибка в выборе напитка!!!");
         }
 
         Drink drink = null;
@@ -21,18 +23,28 @@ public class Task3 {
             case 2 -> drink = new Coffee();
         }
 
+        List<Integer> choiceList = new LinkedList<>();
         System.out.println("""
-                Выберите добавку:
+                Выберите добавки по одной:
                 1 - сахар;
                 2 - молоко;
-                3 - сироп.""");
-        int selectedAdditive = scanner.nextInt();
+                3 - сироп.
+                0 - приготовить напиток""");
 
-        switch (selectedAdditive) {
-            case 1 -> drink = new SugarAdder(drink);
-            case 2 -> drink = new MilkAdder(drink);
-            case 3 -> drink = new SyrupAdder(drink);
-            default -> throw new RuntimeException("Ошибка в выборе добавки!!!");
+        int selectedAdditive = scanner.nextInt();
+        while (selectedAdditive != 0) {
+            choiceList.add(selectedAdditive);
+            selectedAdditive = scanner.nextInt();
         }
+
+        for (int choice : choiceList) {
+            switch (choice) {
+                case 1 -> drink = new SugarAdder(drink);
+                case 2 -> drink = new MilkAdder(drink);
+                case 3 -> drink = new SyrupAdder(drink);
+                default -> throw new RuntimeException("Ошибка в выборе добавки!!!");
+            }
+        }
+        drink.makeDrink();
     }
 }

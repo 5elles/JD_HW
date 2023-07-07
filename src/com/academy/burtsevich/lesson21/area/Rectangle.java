@@ -1,21 +1,32 @@
 package com.academy.burtsevich.lesson21.area;
 
+import java.util.Scanner;
+
 public class Rectangle implements Shape {
     private double sideA;
     private double sideB;
 
-    public void setSideA(int sideA) {
+    Scanner scanner = new Scanner(System.in);
+
+    public void setSideA(double sideA) {
+        if (sideA <= 0) {
+            throw new ArithmeticException("Ошибка в размерах фигуры!!!");
+        }
         this.sideA = sideA;
     }
 
-    public void setSideB(int sideB) {
+    public void setSideB(double sideB) {
+        if (sideB <= 0) {
+            throw new ArithmeticException("Ошибка в размерах фигуры!!!");
+        }
         this.sideB = sideB;
     }
 
-
-    Rectangle(double[] params) {
-        this.sideA = params[0];
-        this.sideB = params[1];
+    Rectangle() {
+        System.out.print("Сторона A = ");
+        setSideA(scanner.nextDouble());
+        System.out.print("Сторона B = ");
+        setSideB(scanner.nextDouble());
     }
 
     @Override

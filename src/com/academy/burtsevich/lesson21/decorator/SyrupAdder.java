@@ -1,12 +1,16 @@
 package com.academy.burtsevich.lesson21.decorator;
 
-public class SyrupAdder extends Kitchen{
+public class SyrupAdder implements Drink {
+    private final Drink drink;
+
     SyrupAdder(Drink drink) {
-        super(drink);
+        this.drink = drink;
     }
 
     @Override
-    public void combine() {
+    public void makeDrink() {
         System.out.println("...добавили сироп");
+        drink.makeDrink();
     }
+
 }
